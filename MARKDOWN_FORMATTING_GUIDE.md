@@ -5,37 +5,16 @@ nav_order: 4
 
 # Markdown Formatting Guide
 
-This guide provides an overview of the Markdown and Jekyll formatting elements used in the OpenSearch documentation. For grammar, punctuation, and language mechanics, see the [Writing Guide](WRITING_GUIDE.md). For brand identity, naming conventions, and content formatting rules, see the [Style Guide](STYLE_GUIDE.md). For conventions on formatting content elements such as lists, links, and images, see the [Text Formatting Guide](TEXT_FORMATTING_GUIDE.md).
+This guide provides an overview of the Markdown and Jekyll formatting elements used in the OpenSearch documentation. For brand identity, naming conventions, and voice and tone, see the [Style Guide](STYLE_GUIDE.md). For grammar, punctuation, and word choice, see the [Writing Guide](WRITING_GUIDE.md). For content formatting conventions, see the [Text Formatting Guide](TEXT_FORMATTING_GUIDE.md).
 
-* * *
-
-### Table of contents
-
-* [Adding pages or sections](#adding-pages-or-sections)
-* [Buttons](#buttons)
-* [Callouts](#callouts)
-* [Cards](#cards)
-* [Code blocks](#code-blocks)
-* [Collapsible blocks](#collapsible-blocks)
-* [Dashes](#dashes)
-* [Horizontal rule](#horizontal-rule)
-* [Images](#images)
-  * [Images in line with text](#images-in-line-with-text)
-* [Labels](#labels)
-* [Links](#links)
-* [Lists](#lists)
-  * [Unordered lists](#unordered-lists)
-  * [Ordered lists](#ordered-lists)
-  * [Nested lists](#nested-lists) 
-  * [Lists with code snippets or images](#lists-with-code-snippets-or-images)
-* [Math](#math)
-* [Steps](#steps)
-* [Tables](#tables)
-* [Text style](#text-style)
-* [Variables in curly braces](#variables-in-curly-braces)
-* [Videos](#videos)
-
-* * *
+<details markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ## Adding pages or sections
 

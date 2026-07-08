@@ -5,7 +5,7 @@ nav_order: 2
 
 # Writing Guide
 
-This guide provides writing standards for OpenSearch Project contributors, covering grammar, punctuation, and language mechanics. For brand identity, naming conventions, and content formatting rules, see the [Style Guide](STYLE_GUIDE.md). For Markdown and Jekyll formatting syntax, see the [Markdown Formatting Guide](MARKDOWN_FORMATTING_GUIDE.md).
+This guide provides writing standards for OpenSearch Project contributors, covering grammar, punctuation, and language mechanics. For brand identity, naming conventions, and voice and tone, see the [Style Guide](STYLE_GUIDE.md). For content formatting conventions, see the [Text Formatting Guide](TEXT_FORMATTING_GUIDE.md). For Markdown and Jekyll syntax, see the [Markdown Formatting Guide](MARKDOWN_FORMATTING_GUIDE.md).
 
 ## Grammar
 

@@ -5,7 +5,7 @@ nav_order: 3
 
 # Text Formatting Guide
 
-This guide provides conventions for formatting and structuring content elements in OpenSearch documentation, including code examples, lists, links, images, and procedures. For Markdown and Jekyll syntax, see the [Markdown Formatting Guide](MARKDOWN_FORMATTING_GUIDE.md). For brand identity, naming conventions, and voice and tone, see the [Style Guide](STYLE_GUIDE.md).
+This guide provides conventions for formatting and structuring content elements in OpenSearch documentation, including code examples, lists, links, images, and procedures. For brand identity, naming conventions, and voice and tone, see the [Style Guide](STYLE_GUIDE.md). For grammar, punctuation, and word choice, see the [Writing Guide](WRITING_GUIDE.md). For Markdown and Jekyll syntax, see the [Markdown Formatting Guide](MARKDOWN_FORMATTING_GUIDE.md).
 
 ## Code examples
 
