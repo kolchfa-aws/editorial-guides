@@ -3,7 +3,7 @@ title: Style Guide
 nav_order: 1
 ---
 
-# OpenSearch Project Style Guidelines
+# Style Guide
 
 This guide describes the style standards for creating OpenSearch content. For complementary information, see the [Writing Guide](WRITING_GUIDE.md), [Text Formatting Guide](TEXT_FORMATTING_GUIDE.md), and [Markdown Formatting Guide](MARKDOWN_FORMATTING_GUIDE.md).
 

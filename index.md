@@ -3,9 +3,9 @@ title: Home
 nav_order: 0
 ---
 
-# OpenSearch Editorial Guides
+# OpenSearch Documentation Style Guide
 
-Welcome to the content style guide for the OpenSearch Project. These guides provide style, writing, and formatting standards for OpenSearch documentation contributors.
+Welcome to the OpenSearch Documentation Style Guide, a collection of guides that provide style, writing, and formatting standards for OpenSearch documentation.
 
 | Guide | Describes |
 | :--- | :--- |
