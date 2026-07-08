@@ -53,20 +53,15 @@ Use _Amazon OpenSearch Serverless_ on first appearance; _OpenSearch Serverless_ 
 
 Use _Amazon OpenSearch Service_ on first appearance; _OpenSearch Service_ is acceptable for subsequent appearances. Amazon OpenSearch Service is a managed service that makes it easy to deploy, operate, and scale OpenSearch clusters in the AWS Cloud. Amazon OpenSearch Service is the successor to Amazon Elasticsearch Service (Amazon ES) and supports OpenSearch and legacy Elasticsearch OSS (up to 7.10, the final open-source version of the software).
 
-**API operation**
+**API, API operation**
 
-Use instead of action, method, or function.
+Use _operation_ instead of _action_, _method_, or _function_. Three capitalization rules apply:
 
-OpenSearch style:
+1. API names: capitalize all words ("Field Capabilities API").
+2. API operations by endpoint name: lowercase with code font ("`_field_caps` API").
+3. API operations described generically: lowercase ("field capabilities operations" or "field capabilities API operations").
 
-- Use the CopySnapshot operation to...
-- The following API operations…
-
-Not OpenSearch style
-
-- Use the CopySnapshot action to...
-- Use the CopySnapshot method to...
-- Use the CopySnapshot function to...
+For more information, see [Formatting and organization](TEXT_FORMATTING_GUIDE.md#formatting-and-organization).
 
 **app or application**
 
