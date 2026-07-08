@@ -2,6 +2,8 @@ title: OpenSearch Editorial Guides
 description: Style, writing, and formatting standards for OpenSearch documentation contributors
 remote_theme: just-the-docs/just-the-docs
 
+color_scheme: opensearch
+
 url: "https://kolchfa-aws.github.io"
 baseurl: "/editorial-guides"
 
