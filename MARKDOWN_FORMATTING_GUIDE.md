@@ -71,7 +71,7 @@ You can use either `copy` or `copy-curl` includes for code snippets formatted us
 ```bash
 curl -XGET "localhost:9200/_tasks?actions=*search&detailed
 ```
-{% include copy.html %}
+{% raw %}{% include copy.html %}{% endraw %}
 ````
 
 **Example of a `copy-curl` include**
@@ -85,7 +85,7 @@ PUT /sample-index1/_clone/cloned-index1
   }
 }
 ```
-{% include copy-curl.html %}
+{% raw %}{% include copy-curl.html %}{% endraw %}
 ````
 
 ## Callouts
@@ -136,7 +136,7 @@ tutorial_cards:
 Insert an include in the page body where you want the cards to appear:
 
 ```
-{% include cards.html cards=page.tutorial_cards %}  
+{% raw %}{% include cards.html cards=page.tutorial_cards %}{% endraw %}  
 ```
 
 ## Code blocks
@@ -162,12 +162,12 @@ There are two ways to format code blocks:
       }
     }
     ```
-    {% include copy-curl.html %}
+    {% raw %}{% include copy-curl.html %}{% endraw %}
     ````
     For information about the copy and copy as cURL button include, see [Buttons](#buttons).
 1. **Tabbed panel**: Use a tabbed panel to provide the same example in multiple programming languages. If using this method, the [buttons](#buttons) are inserted programmatically. Use the following syntax to provide the example in multiple languages. This example creates a tabbed panel with a **REST** and **Python** tabs:
     ```` 
-    {% capture step1_rest %}
+    {% raw %}{% capture step1_rest %}{% endraw %}
     PUT /hotels-index
     {
       "settings": {
@@ -183,9 +183,9 @@ There are two ways to format code blocks:
         }
       }
     }
-    {% endcapture %}
+    {% raw %}{% endcapture %}{% endraw %}
 
-    {% capture step1_python %}
+    {% raw %}{% capture step1_python %}{% endraw %}
     from opensearchpy import OpenSearch
 
     client.indices.create(
@@ -203,11 +203,11 @@ There are two ways to format code blocks:
             }
         }
     )
-    {% endcapture %}
+    {% raw %}{% endcapture %}{% endraw %}
 
-    {% include code-block.html 
+    {% raw %}{% include code-block.html 
         rest=step1_rest
-        python=step1_python %}
+        python=step1_python %}{% endraw %}
     ``` 
     ````
     The supported languages are listed in [this yaml file](/_data/code_languages.yml).
@@ -298,7 +298,7 @@ Place images in the `images` directory of the documentation website. To refer to
 Markdown images are responsive by default. To insert a Markdown image, use the `![<alternate text>](link)` syntax:
 
 ```
-![OS branding]({{site.url}}{{site.baseurl}}/images/brand.png)
+![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png)
 ```
 
 Markdown uses the image’s actual width to render it. It sets the maximum image width to the width of the main body panel.
@@ -306,13 +306,13 @@ Markdown uses the image’s actual width to render it. It sets the maximum image
 If you want to specify the image width, use Kramdown's inline attribute syntax after the image:
 
 ```
-![OS branding]({{site.url}}{{site.baseurl}}/images/brand.png){: width="700" }
+![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png){: width="700" }
 ```
 
 You can specify width as a hard-coded number of pixels, as in the preceding example, or as a percentage of the parent width:
 
 ```
-![OS branding]({{site.url}}{{site.baseurl}}/images/brand.png){: width="70%" }
+![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png){: width="70%" }
 ```
 
 To stretch the image to fit the width of the main body panel, use width=“100%”.
@@ -326,7 +326,7 @@ Always **separate an image from the text with a blank line**:
 ```
 To send a query to OpenSearch, select the query by placing the cursor anywhere in the query text. Then choose the triangle on the top right of the request or press `Ctrl/Cmd+Enter`:
 
-<img src="{{site.url}}{{site.baseurl}}/images/dev-tools/dev-tools-send.png" alt="Send request">
+<img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/dev-tools/dev-tools-send.png" alt="Send request">
 ```
 
 Do not place an image next to text or insert artificial line breaks using `<br>`. Otherwise, the text might render as aligned to the bottom of the image, with the image on the right. 
@@ -338,7 +338,7 @@ If the image is under a list item, place it on a new line with a tab. For more e
 When describing an icon, use the icon's name followed by an inline image in parentheses. Insert the image in line with text using the `nomarkdown` extension and an HTML image:
 
 ```
-Choose the play icon ({::nomarkdown}<img src="{{site.url}}{{site.baseurl}}/images/dev-tools/play-icon.png" class="inline-icon" alt="play icon"/>{:/}) on the upper right of the request.
+Choose the play icon ({::nomarkdown}<img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/dev-tools/play-icon.png" class="inline-icon" alt="play icon"/>{:/}) on the upper right of the request.
 ```
 
 ## Labels
@@ -391,10 +391,10 @@ For more information, see [the `minimum_should_match` parameter](#the-minimum_sh
 
 ### Internal links
 
-**Internal links** are links to another document or image within the documentation website. Because the documentation website is versioned, do not hard code the version number in the link. Use the relative path, where `{{site.url}}{{site.baseurl}}` refers to the main directory, instead:
+**Internal links** are links to another document or image within the documentation website. Because the documentation website is versioned, do not hard code the version number in the link. Use the relative path, where `{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}` refers to the main directory, instead:
 
 ```
-If you need to use a field for exact-value search, map it as a [`keyword`]({{site.url}}{{site.baseurl}}/opensearch/supported-field-types/keyword/).
+If you need to use a field for exact-value search, map it as a [`keyword`]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/opensearch/supported-field-types/keyword/).
 ```
 
 ### GitHub links
@@ -474,13 +474,13 @@ If you need to position an image or a code snippet within a list, use tabs to si
 1. Run the demo batch script.
    There are two ways of running the batch script:
    1. Run the batch script using the Windows UI:
-      1. Navigate to the top directory of your OpenSearch installation and open the `opensearch-{{site.opensearch_version}}` folder.
+      1. Navigate to the top directory of your OpenSearch installation and open the `opensearch-{% raw %}{{site.opensearch_version}}{% endraw %}` folder.
       1. Run the batch script by double-clicking the `opensearch-windows-install.bat` file. This opens a command prompt with an OpenSearch instance running.
    1. Run the batch script from Command prompt or Powershell:
       1. Open Command Prompt by entering `cmd`, or Powershell by entering `powershell`, in the search box next to ****Start**** on the taskbar. 
       1. Change to the top directory of your OpenSearch installation.
          ```bat
-         cd \path\to\opensearch-{{site.opensearch_version}}
+         cd \path\to\opensearch-{% raw %}{{site.opensearch_version}}{% endraw %}
          ```
       1. Run the batch script.
          ```bat
@@ -492,10 +492,10 @@ If you need to position an image or a code snippet within a list, use tabs to si
 
 ```
 1. To begin, select the rule in the **Rule name** column. The rule details pane opens, as shown in the following image.
-    <img src="{{site.url}}{{site.baseurl}}/images/Security/rule-dup2.png" alt="Opening the rule details pane" width="50%">
+    <img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/Security/rule-dup2.png" alt="Opening the rule details pane" width="50%">
 
 1. Select the **Duplicate** button in the upper-right corner of the pane. The **Duplicate rule** window opens in Visual Editor view, and all of the fields are automatically populated with the rule's details. Details are also populated in YAML Editor view, as shown in the following image.
-    <img src="{{site.url}}{{site.baseurl}}/images/Security/dupe-rule.png" alt="Selecting the duplicate button opens the Duplicate rule window" width="50%">
+    <img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/Security/dupe-rule.png" alt="Selecting the duplicate button opens the Duplicate rule window" width="50%">
 ```
 
 ## Math
@@ -538,7 +538,7 @@ steps:
 Insert an include in the page body where you want the steps to appear:
 
 ```
-{% include list.html list_items=page.steps%}
+{% raw %}{% include list.html list_items=page.steps%}{% endraw %}
 ```
 
 ## Tables
@@ -606,7 +606,7 @@ The variable `ctx.index` is rendered in double curly braces.
 To insert a video, add a YouTube player include similar to the following:
 
 ```
-{% include youtube-player.html id='_g46WiGPhFs' %}
+{% raw %}{% include youtube-player.html id='_g46WiGPhFs' %}{% endraw %}
 ```
 
 Note that the `id` variable refers to the YouTube video ID at the end of the URL. For example, the YouTube video at the URL `https://youtu.be/_g46WiGPhFs` has the ID `_g46WiGPhFs`. The ID must be surrounded with single quotation marks.

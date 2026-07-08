@@ -174,7 +174,7 @@ POST /_plugins/_ml/agents/_search
   "size": 1000
 }
 ```
-{% include copy-curl.html %}
+{% raw %}{% include copy-curl.html %}{% endraw %}
 
 ## Example request: Searching for agents of a certain type
 
@@ -190,7 +190,7 @@ POST /_plugins/_ml/agents/_search
   }
 }
 ```
-{% include copy-curl.html %}
+{% raw %}{% include copy-curl.html %}{% endraw %}
 ````
 
 If the responses are significantly different, you can include a response for each request. If the responses are the same, include one response at the end of all requests.
