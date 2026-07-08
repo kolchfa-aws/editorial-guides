@@ -55,7 +55,7 @@ curl -XGET "localhost:9200/_tasks?actions=*search&detailed
 
 **Example of a `copy-curl` include**
 
-````yaml
+````csharp
 ```json
 PUT /sample-index1/_clone/cloned-index1
 {
@@ -123,7 +123,7 @@ Insert an include in the page body where you want the cards to appear:
 There are two ways to format code blocks:
 
 1. **Single code block**: Use triple backticks and provide the highlighting language for the code block. For example, format a REST request in the following way:
-    ````yaml
+    ````csharp
     ```json
     PUT /hotels-index
     {
