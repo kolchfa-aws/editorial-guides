@@ -67,7 +67,7 @@ You can use either `copy` or `copy-curl` includes for code snippets formatted us
 
 **Example of a `copy` include**
 
-````
+````bash
 ```bash
 curl -XGET "localhost:9200/_tasks?actions=*search&detailed
 ```
@@ -76,7 +76,7 @@ curl -XGET "localhost:9200/_tasks?actions=*search&detailed
 
 **Example of a `copy-curl` include**
 
-````
+````json
 ```json
 PUT /sample-index1/_clone/cloned-index1
 {
@@ -166,7 +166,7 @@ There are two ways to format code blocks:
     ````
     For information about the copy and copy as cURL button include, see [Buttons](#buttons).
 1. **Tabbed panel**: Use a tabbed panel to provide the same example in multiple programming languages. If using this method, the [buttons](#buttons) are inserted programmatically. Use the following syntax to provide the example in multiple languages. This example creates a tabbed panel with a **REST** and **Python** tabs:
-    ```` 
+    ````json 
     {% raw %}{% capture step1_rest %}{% endraw %}
     PUT /hotels-index
     {
@@ -555,7 +555,7 @@ Body 1 | Body 2, which is extremely lengthy, but there is no need to specify its
 
 To insert line breaks within tables, use `<br>`:
 
-```
+```html
 Header 1 | Header 2
 :--- | :---
 Body 1 | Body paragraph 1 <br> Body paragraph 2 
@@ -563,7 +563,7 @@ Body 1 | Body paragraph 1 <br> Body paragraph 2
 
 To use lists within a table, use `<br>` and `-` :
 
-```
+```html
 Header 1 | Header 2
 :--- | :---
 Body 1 | List:<br>- One<br>- Two
@@ -574,7 +574,7 @@ You can also use `&nbsp;` to insert one space, `&ensp;` to insert two spaces, an
 
 If you need a list with real bullet points, use the bullet point HTML code:
 
-```
+```html
 Header 1 | Header 2
 :--- | :---
 Body 1 | List:<br>&ensp;&#x2022; One<br>&ensp;&#x2022; Two
