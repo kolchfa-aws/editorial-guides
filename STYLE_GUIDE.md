@@ -64,7 +64,7 @@ It's preferable to refer to settings by the functionality they provide. For exam
 | Correct | Incorrect |
 | :--- | :--- |
 | "To enable query metrics, configure the following settings:" | "To enable query metrics, configure the following settings in the Query Insights plugin:" |
-| "The Neural Search plugin supports the following settings." <br> "You can customize vector search by modifying the following settings." | N/A |
+|  "You can customize vector search by modifying the following settings." | "The Neural Search plugin supports the following settings." |
 
 Most plugins are bundled with the standard OpenSearch distribution. Do not include installation steps for bundled plugins. Instead, describe how to configure or use the feature directly. Plugins that are _not_ bundled by default (such as the `analysis-icu` plugin) do require an installation step.
 
