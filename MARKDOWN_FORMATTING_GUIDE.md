@@ -569,11 +569,11 @@ For guidance on using code examples and when to use code font, see [Code example
 
 ## Variables in curly braces
 
-To correctly display variables that are in curly braces, escape the curly braces with the {% raw %}`{% raw %}{% endraw %}`{% endraw %} tags:
+To correctly display variables that are in curly braces, escape the curly braces with the `{{ "{% raw " }}%}{{ "{% endraw " }}%}` tags:
 
 ````
 "message_template": {
-    "source": "the index is {% raw %}{% raw %}{% endraw %}{% raw %}{{ctx.index}}{% endraw %}{% raw %}{% endraw %}{% endraw %}"
+    "source": "the index is {{ "{% raw " }}%}{% raw %}{{ctx.index}}{% endraw %}{{ "{% endraw " }}%}"
 }
 ````
 
