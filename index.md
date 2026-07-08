@@ -18,4 +18,4 @@ Welcome to the OpenSearch Documentation Style Guide, a collection of guides that
 | [Blog Style Guide](BLOG_STYLE_GUIDE.md) | Blog post writing conventions |
 | [OpenSearch Terms](TERMS.md) | Terminology and word usage |
 
-To start contributing, see [Contributing](https://github.com/opensearch-project/documentation-website/blob/main/CONTRIBUTING.md).
+To start contributing, see [Contributing guidelines](https://github.com/opensearch-project/documentation-website/blob/main/CONTRIBUTING.md).
