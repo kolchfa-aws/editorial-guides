@@ -61,10 +61,10 @@ A plugin is a distinct component that extends the functionality of OpenSearch. D
 
 It's preferable to refer to settings by the functionality they provide. For example, instead of "Neural Search plugin settings" and "k-NN plugin settings", you can use "vector search settings" because these settings support vector search functionality. Only mention a plugin by name if necessary when describing the plugin settings. 
 
-| Correct | Incorrect |
+| Preferred | Acceptable |
 | :--- | :--- |
-| "To enable query metrics, configure the following settings:" | "To enable query metrics, configure the following settings in the Query Insights plugin:" |
-|  "You can customize vector search by modifying the following settings." | "The Neural Search plugin supports the following settings." |
+| "To enable query metrics, configure the following settings:" | "To enable query metrics, configure the following Query Insights plugin settings:" |
+| "You can customize vector search by modifying the following settings." | "The Neural Search plugin supports the following settings." |
 
 Most plugins are bundled with the standard OpenSearch distribution. Do not include installation steps for bundled plugins. Instead, describe how to configure or use the feature directly. Plugins that are _not_ bundled by default (such as the `analysis-icu` plugin) do require an installation step.
 
