@@ -55,7 +55,7 @@ curl -XGET "localhost:9200/_tasks?actions=*search&detailed
 
 **Example of a `copy-curl` include**
 
-````json
+````csharp
 ```json
 PUT /sample-index1/_clone/cloned-index1
 {
@@ -123,7 +123,7 @@ Insert an include in the page body where you want the cards to appear:
 There are two ways to format code blocks:
 
 1. **Single code block**: Use triple backticks and provide the highlighting language for the code block. For example, format a REST request in the following way:
-    ````json
+    ````csharp
     ```json
     PUT /hotels-index
     {
@@ -145,7 +145,7 @@ There are two ways to format code blocks:
     ````
     For information about the copy and copy as cURL button include, see [Buttons](#buttons).
 1. **Tabbed panel**: Use a tabbed panel to provide the same example in multiple programming languages. If using this method, the [buttons](#buttons) are inserted programmatically. Use the following syntax to provide the example in multiple languages. This example creates a tabbed panel with a **REST** and **Python** tabs:
-    ````json 
+    ````csharp 
     {% raw %}{% capture step1_rest %}{% endraw %}
     PUT /hotels-index
     {
