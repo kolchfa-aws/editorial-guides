@@ -44,43 +44,53 @@ Do not start a sentence with a word in backticks. Restructure to avoid leading w
 
 If you use a caption-style example, use a heading with "Example" followed by a colon. The following are caption-style examples:
 
-> #### Example: Retrieve a specified document from an index
->
-> The following example shows a request that retrieves a specific document and its information from an index:
->
-> ```json
-> GET sample-index1/_doc/1
-> ```
+````markdown
+#### Example: Retrieve a specified document from an index
 
-> #### Example request
->
-> ```json
-> GET sample-index1/_doc/1
-> ```
+The following example shows a request that retrieves a specific document and its information from an index:
+
+```json
+GET sample-index1/_doc/1
+```
+````
+
+````markdown
+#### Example request
+
+```json
+GET sample-index1/_doc/1
+```
+````
 
 Sometimes, you might not want to break up the flow of the text with a new heading. In these cases, you can use an example with no heading:
 
-> The following command maps ports 9200 and 9600, sets the discovery type to single-node, and requests the newest image of OpenSearch:
->
-> ```bash
-> docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest
-> ```
+````markdown
+The following command maps ports 9200 and 9600, sets the discovery type to single-node, and requests the newest image of OpenSearch:
+
+```bash
+docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest
+```
+````
 
 ### Lead-in sentences
 
-When using lead-in sentences, summarize, clarify, or refer to the example that follows. A lead-in sentence is a complete sentence that ends in a colon.  
+When using lead-in sentences, summarize, clarify, or refer to the example that follows. A lead-in sentence is a complete sentence that ends in a colon.
 
-   For example, the following query requests statistics for `docs` and `search`:
+```markdown
+For example, the following query requests statistics for `docs` and `search`:
 
-   `GET _nodes/stats/indices/docs,search`
+`GET _nodes/stats/indices/docs,search`
+```
 
 ### Referring to a variable or placeholder
 
 When introducing a code or command line example that refers to a variable or placeholder in the example, be direct by including the variable or placeholder name in the text. Surround the variable or placeholder name with angle brackets (`<` and `>`), for example, `<port>`. Don't refer to the variable or placeholder by its color or format because these can change. If variable or placeholder texts have a lot in common and there are several for the user to complete, be direct by including a "template" for the input in the replaceable text.
 
-   In the following example, replace `<component-x>` with your own information:
+```markdown
+In the following example, replace `<component-x>` with your own information:
 
-   `~/workspace/project-name$ eb init --modules <component-a> <component-b>`
+`~/workspace/project-name$ eb init --modules <component-a> <component-b>`
+```
 
 ## Formatting and organization
 
@@ -113,13 +123,17 @@ When you do include a screenshot, all text must be readable without zooming. If 
 
 When annotating screenshots, use boxes for callouts and white numbers on a red circle background for numbered annotations. If the screenshot has labeled callouts, describe the components in a list below the image using italicized names for unlabeled components and bold text for labeled UI elements, with the corresponding callout letter in parentheses. This list does not need a lead-in sentence. For example:
 
-> - The _time filter_ (C) provides a graphical interface for selecting data ranges.
-> - The **Results** table (H) displays summaries of the selected documents.
+```markdown
+- The _time filter_ (C) provides a graphical interface for selecting data ranges.
+- The **Results** table (H) displays summaries of the selected documents.
+```
 
 If callouts are numeric, use a numbered list instead:
 
-> 1. The query bar (1) accepts search queries in DQL or Lucene syntax.
-> 1. The time filter (2) restricts results to a specified date range.
+```markdown
+1. The query bar (1) accepts search queries in DQL or Lucene syntax.
+1. The time filter (2) restricts results to a specified date range.
+```
 
 ## Links
 
@@ -130,11 +144,11 @@ If callouts are numeric, use a numbered list instead:
           - Where space is limited (for example, in a table), you can use "_See_ [link text]."
      - Ensure that the link text matches the section title text.
 
-          > "To get involved, see [Contributing](https://opensearch.org/source.html) on the OpenSearch website."
+          "To get involved, see [Contributing](https://opensearch.org/source.html) on the OpenSearch website."
 
 - **Embedded links**: Embedded links are woven into a sentence without formal introductory text. They're especially useful in tables or other elements where space is tight. The text around the embedded link must relate to the information in the link so that the reader understands the context. Do not use _here_ or _click here_ for link text because it creates accessibility problems.
 
-     > "Finally, [delete the index](https://docs.opensearch.org/latest/api-reference/index-apis/delete-index)."
+     "Finally, [delete the index](https://docs.opensearch.org/latest/api-reference/index-apis/delete-index)."
 
 ## Lists
 

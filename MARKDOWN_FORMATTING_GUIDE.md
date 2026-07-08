@@ -43,7 +43,7 @@ This repository contains [Markdown](https://guides.github.com/features/mastering
 
 In addition to the content for a given page, each Markdown file contains some Jekyll [front matter](https://jekyllrb.com/docs/front-matter/) similar to the following:
 
-```
+```yaml
 ---
 layout: default
 title: Date
@@ -101,15 +101,15 @@ Place a callout directly under the paragraph to which you want to apply the call
 
 **Example**
 
-```
+```markdown
 In case of a cluster or node failure, all PIT data is lost.
 {: .note}
 ```
 
 For a callout with multiple paragraphs or lists, use `>`:
 
-```
->   ****PREREQUISITE****
+```markdown
+>   **PREREQUISITE**
 >
 >   To use a custom vector map with GeoJSON, install these two required plugins:
 >   * OpenSearch Dashboards Maps [`dashboards-maps`](https://github.com/opensearch-project/dashboards-maps_) front-end plugin
@@ -275,7 +275,7 @@ To insert a collapsible Table of contents, use the following markup:
 
 Use one dash for hyphens, two for en dashes, and three for em dashes:
 
-```
+```markdown
 upper-right
 10--12 nodes per cluster
 There is one candidate generator available---`direct_generator`.
@@ -285,7 +285,7 @@ There is one candidate generator available---`direct_generator`.
 
 A horizontal rule is used to separate text sections. Use three asterisks separated by spaces for a horizontal rule:
 
-```
+```markdown
 ## Why use OpenSearch?
 
 * * *
@@ -297,21 +297,21 @@ Place images in the `images` directory of the documentation website. To refer to
 
 Markdown images are responsive by default. To insert a Markdown image, use the `![<alternate text>](link)` syntax:
 
-```
+```markdown
 ![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png)
 ```
 
 Markdown uses the image’s actual width to render it. It sets the maximum image width to the width of the main body panel.
 
-If you want to specify the image width, use Kramdown's inline attribute syntax after the image:
+If you want to specify the image width, use Kramdown’s inline attribute syntax after the image:
 
-```
+```markdown
 ![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png){: width="700" }
 ```
 
 You can specify width as a hard-coded number of pixels, as in the preceding example, or as a percentage of the parent width:
 
-```
+```markdown
 ![OS branding]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/brand.png){: width="70%" }
 ```
 
@@ -323,7 +323,7 @@ Image borders are automatic; do not manually add a border to an image.
 
 Always **separate an image from the text with a blank line**:
 
-```
+```markdown
 To send a query to OpenSearch, select the query by placing the cursor anywhere in the query text. Then choose the triangle on the top right of the request or press `Ctrl/Cmd+Enter`:
 
 <img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/dev-tools/dev-tools-send.png" alt="Send request">
@@ -337,7 +337,7 @@ If the image is under a list item, place it on a new line with a tab. For more e
 
 When describing an icon, use the icon's name followed by an inline image in parentheses. Insert the image in line with text using the `nomarkdown` extension and an HTML image:
 
-```
+```markdown
 Choose the play icon ({::nomarkdown}<img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/dev-tools/play-icon.png" class="inline-icon" alt="play icon"/>{:/}) on the upper right of the request.
 ```
 
@@ -353,7 +353,7 @@ You can use the following labels:
 
 Use a purple label to specify the version in which an API was introduced:
 
-```
+```markdown
 # Alias
 Introduced 1.0
 {: .label .label-purple }
@@ -361,7 +361,7 @@ Introduced 1.0
 
 If we introduce a breaking change to an operation, add an additional label with a link to the release note for that breaking change:
 
-```
+```markdown
 ## Get roles
 Introduced 1.0
 {: .label .label-purple }
@@ -373,7 +373,7 @@ Introduced 1.0
 
 To add a link to a document, section, or image, use the `[name](link)` syntax, for example:
 
-```
+```markdown
 ## Looking for the Javadoc?
 
 See [opensearch.org/javadocs/](https://opensearch.org/javadocs/).
@@ -383,7 +383,7 @@ See [opensearch.org/javadocs/](https://opensearch.org/javadocs/).
 
 **Section links** are links to headings in your document. Markdown lowercases the headings for links, drops back ticks, and replaces spaces with hyphens:
 
-```
+```markdown
 ## The `minimum_should_match` parameter
 
 For more information, see [the `minimum_should_match` parameter](#the-minimum_should_match-parameter).
@@ -393,7 +393,7 @@ For more information, see [the `minimum_should_match` parameter](#the-minimum_sh
 
 **Internal links** are links to another document or image within the documentation website. Because the documentation website is versioned, do not hard code the version number in the link. Use the relative path, where `{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}` refers to the main directory, instead:
 
-```
+```markdown
 If you need to use a field for exact-value search, map it as a [`keyword`]({% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/opensearch/supported-field-types/keyword/).
 ```
 
@@ -401,7 +401,7 @@ If you need to use a field for exact-value search, map it as a [`keyword`]({% ra
 
 When linking to a GitHub issue or PR, refer to the issue or PR number in the following format:
 
-```
+```markdown
 For more details, see issue [#1940](https://github.com/opensearch-project/opensearch/issues/1940).
 ```
 
@@ -413,14 +413,14 @@ Markdown supports unordered and ordered lists, nested lists, and lists with code
 
 Use asterisks or dashes for unordered lists:
 
-```
+```markdown
 * One
 * Two
 ```
 
 or
 
-```
+```markdown
 - One 
 - Two
 ```
@@ -433,7 +433,7 @@ Don’t mix and match asterisks and dashes.
 
 Use all 1s for ordered lists:
 
-```
+```markdown
 1. One 
 1. Two
 ```
@@ -442,7 +442,7 @@ Jekyll will automatically correctly number the items, and it will be much easier
 
 If there is a paragraph in the middle of a list, the list will restart with 1 after the paragraph. If you want to continue the list after the paragraph, use `counter-reset: none`:
 
-```
+```markdown
 1.  One
 
 Paragraph that breaks the numbering
@@ -455,7 +455,7 @@ Paragraph that breaks the numbering
 
 Use tabs to nest lists:
 
-```
+```markdown
 1. Parent 1
     - Child 1
     - Child 2
@@ -470,7 +470,7 @@ If you need to position an image or a code snippet within a list, use tabs to si
 
 **Example with code snippets**
 
-```
+```markdown
 1. Run the demo batch script.
    There are two ways of running the batch script:
    1. Run the batch script using the Windows UI:
@@ -490,7 +490,7 @@ If you need to position an image or a code snippet within a list, use tabs to si
 
 **Example with images**
 
-```
+```markdown
 1. To begin, select the rule in the **Rule name** column. The rule details pane opens, as shown in the following image.
     <img src="{% raw %}{{site.url}}{% endraw %}{% raw %}{{site.baseurl}}{% endraw %}/images/Security/rule-dup2.png" alt="Opening the rule details pane" width="50%">
 
@@ -502,7 +502,7 @@ If you need to position an image or a code snippet within a list, use tabs to si
 
 To add mathematical expressions to a page, add `has_math: true` to the page’s front matter. Then insert LaTeX math into HTML tags with the rest of your Markdown content, as shown in the following example:
 
-```
+```markdown
 ## Math
 
 Some Markdown paragraph. Here's a formula:
@@ -517,7 +517,7 @@ And back to Markdown.
 
 Alternatively, you can use double dollar signs (`$$`) for both display and inline math directly in Markdown:
 
-```
+```markdown
 The probability of selecting pair $$i$$ is proportional to $$1 \over i^\alpha$$.
 ```
 
