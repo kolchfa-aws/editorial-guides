@@ -577,7 +577,13 @@ To correctly display variables that are in curly braces, escape the curly braces
 }
 ````
 
-The variable `ctx.index` is rendered in double curly braces.
+The variable `ctx.index` is rendered in double curly braces:
+
+```json
+"message_template": {
+    "source": "the index is {% raw %}{{ctx.index}}{% endraw %}"
+}
+```
 
 ## Videos
 
